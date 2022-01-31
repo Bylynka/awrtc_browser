@@ -52,14 +52,13 @@ class CallApp {
             this.mUiUrl.innerHTML = this.GetUrl();
         };
         this.mNetConfig.IceServers = [
-            { urls: "stun:stun.because-why-not.com:443" },
-            { urls: "stun:stun.l.google.com:19302" }
+            { urls: ["stun:stun.because-why-not.com:443", "stun:stun1.l.google.com:19302", "stun:stun2.l.google.com:19302"] },
         ];
         //use for testing conferences 
         //this.mNetConfig.IsConference = true;
         //this.mNetConfig.SignalingUrl = "wss://signaling.because-why-not.com/testshared";
         this.mNetConfig.IsConference = false;
-        this.mNetConfig.SignalingUrl = "ws://bylynka.click:12776/";
+        this.mNetConfig.SignalingUrl = "wss://bylynka.click:12777/";
     }
     GetParameterByName(name) {
         var url = window.location.href;
